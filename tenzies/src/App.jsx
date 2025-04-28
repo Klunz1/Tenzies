@@ -72,7 +72,7 @@ export default function App() {
             </div>
             <p>Rerolls: {turns}</p>
             <div className="button-container">
-            <button ref={buttonRef} className="roll-dice" onClick={rollDice}>
+            <button ref={buttonRef} className={!gameWon ? "roll-dice" : "new-game"} onClick={rollDice}>
                 {gameWon ? "New Game" : "Roll"}
             </button>
             <button className="restart-game" onClick={() => setDice(generateAllNewDice())}>Restart game</button>
